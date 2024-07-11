@@ -132,21 +132,6 @@
             color: #777;
         }
 
-        .buy-now {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #27ae60;
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .buy-now:hover {
-            background-color: #219150;
-        }
-
         /* Footer styling */
         .footer {
             background-color: #333;
@@ -211,19 +196,13 @@
                     
                     const productPrice = document.createElement('p');
                     productPrice.className = 'product-price';
-                    productPrice.textContent = $${product.price};
+                    productPrice.textContent = `$${product.price}`;
                     productContent.appendChild(productPrice);
 
                     const productDescription = document.createElement('p');
                     productDescription.className = 'product-description';
                     productDescription.textContent = product.description;
                     productContent.appendChild(productDescription);
-
-                    const buyNowButton = document.createElement('a');
-                    buyNowButton.className = 'buy-now';
-                    buyNowButton.href = '#';
-                    buyNowButton.textContent = 'Buy Now';
-                    productContent.appendChild(buyNowButton);
                     
                     productElement.appendChild(productContent);
                     productGrid.appendChild(productElement);
